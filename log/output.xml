@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.0.2 (Python 3.11.1 on win32)" generated="20250417 20:34:27.369" rpa="false" schemaversion="3">
+<suite id="s1" name="Ui Tests" source="C:\Users\ROBOT-FRAMEWORK-DEMO\Python-Robot-Framework-Demo\tests\ui_tests.robot">
+<test id="s1-t1" name="Verify Login Functionality" line="7">
+<kw name="Open Application" library="ui_keywords">
+<arg>${MyEuroClear}</arg>
+<arg>${BROWSER}</arg>
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${url}</arg>
+<arg>${browser}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20250417 20:34:28.239" level="INFO">Opening browser 'edge' to base url 'https://my.euroclear.com/users/en/login.html'.</msg>
+<status status="PASS" starttime="20250417 20:34:28.227" endtime="20250417 20:34:33.404"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20250417 20:34:33.405" endtime="20250417 20:34:33.647"/>
+</kw>
+<status status="PASS" starttime="20250417 20:34:28.227" endtime="20250417 20:34:33.648"/>
+</kw>
+<kw name="Enter Text" library="ui_keywords">
+<arg>${USERNAME_FIELD}</arg>
+<arg>${USERNAME}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250417 20:34:33.650" endtime="20250417 20:34:34.049"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250417 20:34:34.049" level="INFO">Typing text 'testuser' into text field 'xpath=//input[@id="username"]'.</msg>
+<status status="PASS" starttime="20250417 20:34:34.049" endtime="20250417 20:34:34.244"/>
+</kw>
+<status status="PASS" starttime="20250417 20:34:33.648" endtime="20250417 20:34:34.245"/>
+</kw>
+<kw name="Enter Text" library="ui_keywords">
+<arg>${PASSWORD_FIELD}</arg>
+<arg>${PASSWORD}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250417 20:34:34.247" endtime="20250417 20:34:34.284"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>${text}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20250417 20:34:34.284" level="INFO">Typing text 'testpass' into text field 'xpath=//input[@id='password']'.</msg>
+<status status="PASS" starttime="20250417 20:34:34.284" endtime="20250417 20:34:34.454"/>
+</kw>
+<status status="PASS" starttime="20250417 20:34:34.245" endtime="20250417 20:34:34.455"/>
+</kw>
+<kw name="Click On Element" library="ui_keywords">
+<arg>${LOGIN_BUTTON}</arg>
+<kw name="Wait Until Element Is Visible" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<arg>timeout=10s</arg>
+<doc>Waits until the element ``locator`` is visible.</doc>
+<status status="PASS" starttime="20250417 20:34:34.458" endtime="20250417 20:34:34.545"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>${locator}</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20250417 20:34:34.546" level="INFO">Clicking element 'xpath=//button/span[text()="Log in"]'.</msg>
+<status status="PASS" starttime="20250417 20:34:34.546" endtime="20250417 20:34:35.831"/>
+</kw>
+<status status="PASS" starttime="20250417 20:34:34.456" endtime="20250417 20:34:35.831"/>
+</kw>
+<kw name="Close Application" library="ui_keywords">
+<kw name="Close Browser" library="SeleniumLibrary">
+<doc>Closes the current browser.</doc>
+<status status="PASS" starttime="20250417 20:34:35.835" endtime="20250417 20:34:39.282"/>
+</kw>
+<status status="PASS" starttime="20250417 20:34:35.831" endtime="20250417 20:34:39.282"/>
+</kw>
+<kw name="TestReport" library="ui_keywords" type="TEARDOWN">
+<kw name="Get Variable Value" library="BuiltIn">
+<var>${suite_name}</var>
+<arg>${SUITE NAME}</arg>
+<doc>Returns variable value or ``default`` if the variable does not exist.</doc>
+<msg timestamp="20250417 20:34:39.288" level="INFO">${suite_name} = Ui Tests</msg>
+<status status="PASS" starttime="20250417 20:34:39.285" endtime="20250417 20:34:39.288"/>
+</kw>
+<kw name="Get Variable Value" library="BuiltIn">
+<var>${test_name}</var>
+<arg>${TEST NAME}</arg>
+<doc>Returns variable value or ``default`` if the variable does not exist.</doc>
+<msg timestamp="20250417 20:34:39.292" level="INFO">${test_name} = Verify Login Functionality</msg>
+<status status="PASS" starttime="20250417 20:34:39.290" endtime="20250417 20:34:39.292"/>
+</kw>
+<kw name="Get Variable Value" library="BuiltIn">
+<var>${test_status}</var>
+<arg>${TEST STATUS}</arg>
+<doc>Returns variable value or ``default`` if the variable does not exist.</doc>
+<msg timestamp="20250417 20:34:39.296" level="INFO">${test_status} = PASS</msg>
+<status status="PASS" starttime="20250417 20:34:39.293" endtime="20250417 20:34:39.297"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<var>${error_message}</var>
+<arg>'${test_status}' == 'PASS'</arg>
+<arg>Set Variable</arg>
+<arg>None</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<kw name="Set Variable" library="BuiltIn">
+<arg>None</arg>
+<doc>Returns the given values which can then be assigned to a variables.</doc>
+<status status="PASS" starttime="20250417 20:34:39.299" endtime="20250417 20:34:39.327"/>
+</kw>
+<msg timestamp="20250417 20:34:39.327" level="INFO">${error_message} = None</msg>
+<status status="PASS" starttime="20250417 20:34:39.298" endtime="20250417 20:34:39.328"/>
+</kw>
+<kw name="Run Keyword If" library="BuiltIn">
+<var>${error_message}</var>
+<arg>'${test_status}' == 'FAIL'</arg>
+<arg>Get Variable Value</arg>
+<arg>${TEST_MESSAGE}</arg>
+<doc>Runs the given keyword with the given arguments, if ``condition`` is true.</doc>
+<msg timestamp="20250417 20:34:39.331" level="INFO">${error_message} = None</msg>
+<status status="PASS" starttime="20250417 20:34:39.330" endtime="20250417 20:34:39.332"/>
+</kw>
+<status status="PASS" starttime="20250417 20:34:39.283" endtime="20250417 20:34:39.333"/>
+</kw>
+<status status="PASS" starttime="20250417 20:34:28.227" endtime="20250417 20:34:39.333"/>
+</test>
+<status status="PASS" starttime="20250417 20:34:27.385" endtime="20250417 20:34:39.354"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Ui Tests">Ui Tests</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
