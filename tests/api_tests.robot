@@ -1,7 +1,8 @@
 *** Settings ***
 Library    RequestsLibrary
 Library    Collections
-Resource    ../resources/api_Keywords.robot
+
+Resource    ../configs/ResourceFile.robot
 
 Test Setup    Read API Test Data
 

@@ -1,7 +1,6 @@
 *** Settings ***
-Resource    ../resources/ui_keywords.robot
-Resource    ../resources/variables.robot
-Library    SeleniumLibrary
+Resource    ../configs/ResourceFile.robot
+
 
 *** Test Cases ***
 Verify Login Functionality
@@ -12,3 +11,8 @@ Verify Login Functionality
     Click On Element    ${LOGIN_BUTTON}
     Close Application
 
+Verify Login functionality with BDD format
+    [Teardown]      TestReport
+    Given user launch browser
+    When user provide username and password
+    Then user click on Login button

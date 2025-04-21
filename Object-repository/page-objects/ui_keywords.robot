@@ -2,6 +2,8 @@
 Library    SeleniumLibrary
 Library    Collections
 Library    OperatingSystem
+Resource        ../../configs/ResourceFile.robot
+
 
 *** Keywords ***
 Open Application

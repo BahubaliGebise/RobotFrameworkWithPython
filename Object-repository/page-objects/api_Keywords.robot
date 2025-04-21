@@ -1,17 +1,17 @@
 *** Settings ***
 Library    RequestsLibrary
 Library    Collections
-Library    ../CustomLibraries/ReadFromExcel.py
+
+Resource        ../../configs/ResourceFile.robot
 
 *** Variables ***
 ${TEST_DATA_FILE}    ${EXECDIR}/testdata/TestData.xlsx
-
 ${BASE_URL}          https://Euroclear.com
 
 *** Keywords ***
 
 Read API Test Data
-    ${data}    Read Test Data   ${TEST_DATA_FILE}
+    ${data}     Read API Test Data
     Set Test Variable    ${TEST_DATA}    ${data}
 
 Perform API Request
